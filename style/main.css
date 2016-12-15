@@ -1,0 +1,63 @@
+/* Media Queries */
+/* Desktop First (don't be mad) */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+body {
+  background-color: black;
+  background-image: url('http://jasongoebel.com/assets/images/bg-chalkboard.jpg');
+}
+#menu {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'chalk_dashregular';
+}
+
+#menuTitle {
+  width: 100%;
+  text-align: center;
+}
+
+#menuTitle>span {
+  font-size: 2.5em;
+}
+
+#gameBoard {
+  width:400px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+/* mobile devices */
+@media screen and (max-width: 500px) {
+
+  #menu {
+    width: 300px;
+  }
+
+  #menuTitle {
+	width: 100%;
+    text-align: center;
+  }
+
+  #menuTitle>span {
+  font-size: 1.5em;
+}
+}
