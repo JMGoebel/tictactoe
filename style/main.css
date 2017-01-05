@@ -9,7 +9,10 @@
 body {
   background-color: black;
   background-image: url('http://jasongoebel.com/assets/images/bg-chalkboard.jpg');
+  background-position: center;
+  background-size: cover;
 }
+
 #menu {
   width: 500px;
   height: 200px;
@@ -20,23 +23,67 @@ body {
   font-family: 'chalk_dashregular';
 }
 
+#menu h3 {
+  padding-bottom: 50px;
+}
+
+p {
+  font-family: 'chalkboardregular';
+  font-size: 1.2em;
+  color: antiquewhite;
+  text-align: center;
+}
+
+#xs, #os {
+  font-size: 1.5em;
+  display: inline-block;
+  transition: all .2s linear;
+}
+
+#xs:hover, #os:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+  text-shadow: 2px 2px black;
+}
+
+#xs {
+  color: turquoise;
+}
+
+#os {
+  color: orange;
+}
+
 #menuTitle {
   width: 100%;
   text-align: center;
 }
 
+@keyframes bounce {
+  from {
+    top: 10px;
+  }
+  to {
+    top: 0;
+  }
+}
+
 #menuTitle>span {
+  position: relative;
   font-size: 2.5em;
+  animation-name: bounce;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 #gameBoard {
+  display: none;
   width:400px;
   height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
 }
 
 .square {

@@ -1,4 +1,10 @@
 /*global console*/
+
+
+// Main Menu Buttons
+var xButtonMenu = document.getElementById('xs');
+var yButtonMenu = document.getElementById('ys');
+
 var gameData = {
   moveCount: 0,
   turn: "x",
@@ -46,21 +52,23 @@ function init() {
   gameData.player = 'x';
 }
 
-// Menu Visual
+// Menu Visual random bouncy/color characters
 var menuTitle = document.getElementById('menuTitle');
 var tempTitle = "";
 for(let x in menuTitle.textContent){
   var rnd =  Math.floor(Math.random() * (2 - 0 +  1));
-  console.log(rnd);
+  var rndBounce =  Math.floor(Math.random() * (11 - 5) + 5) / 10;
   if(rnd === 0){
-    tempTitle += "<span style='color: orange'>" + menuTitle.textContent[x] + "</span>";
+    tempTitle += "<span style='color: orange; animation-duration: " + rndBounce + "s'>" + menuTitle.textContent[x] + "</span>";
   } else if (rnd === 1) {
-    tempTitle += "<span style='color: silver'>" + menuTitle.textContent[x] + "</span>";
+    tempTitle += "<span style='color: silver; animation-duration: " + rndBounce + "s'>" + menuTitle.textContent[x] + "</span>";
   } else {
-    tempTitle += "<span style='color: turquoise'>" + menuTitle.textContent[x] + "</span>";
+    tempTitle += "<span style='color: turquoise; animation-duration: " + rndBounce + "s'>" + menuTitle.textContent[x] + "</span>";
   }
 }
 menuTitle.innerHTML = tempTitle;
+
+
 
 
 init();
