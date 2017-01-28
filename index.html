@@ -22,22 +22,28 @@
     <!-- MENU SCREEN -->
     <div id="menu">
       <h3 id="menuTitle">TIC-TAC-TOE</h3>
-      <p><span id="xs">X</span><sup>'s</sup> or <span id="os">O</span><sup>'s</sup></p>
+      <p>choose</p><br>
+      <p><span id="xs" class="pieceChoice">X</span><sup>'s</sup> or <span id="os" class="pieceChoice">O</span><sup>'s</sup></p>
     </div>
 
     <!-- GAME SCREEN -->
     <div id='gameBoard'>
-      <div class="row">
-        <div class="square">x</div><div class="square">o</div><div class="square">x</div>
-      </div>
-      <div class="row">
-        <div class="square">o</div><div class="square">x</div><div class="square">o</div>
-      </div>
-      <div class="row">
-        <div class="square">x</div><div class="square">o</div><div class="square">x</div>
+      <p> Its <span id="whosTurn"></span>'s turn</p>
+      <br>
+      <div id='cellContainer'>
+        <div class='cell' id="0"></div>
+        <div class='cell' id="1"></div>
+        <div class='cell' id="2"></div>
+
+        <div class='cell' id="3"></div>
+        <div class='cell' id="4"></div>
+        <div class='cell' id="5"></div>
+
+        <div class='cell' id="6"></div>
+        <div class='cell' id="7"></div>
+        <div class='cell' id="8"></div>
       </div>
     </div>
-
 
     <!-- Scripts -->
     <script src="./js/main.js"></script>

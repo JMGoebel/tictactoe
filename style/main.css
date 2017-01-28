@@ -1,11 +1,9 @@
-/* Media Queries */
-/* Desktop First (don't be mad) */
-
 * {
   margin: 0;
   padding: 0;
   font-size: 12px;
 }
+
 body {
   background-color: black;
   background-image: url('http://jasongoebel.com/assets/images/bg-chalkboard.jpg');
@@ -54,6 +52,10 @@ p {
   color: orange;
 }
 
+#whosTurn {
+  font-size: 1.5em;
+}
+
 #menuTitle {
   width: 100%;
   text-align: center;
@@ -78,7 +80,7 @@ p {
 
 #gameBoard {
   display: none;
-  width:400px;
+  width:307px;
   height: auto;
   position: absolute;
   top: 50%;
@@ -86,10 +88,86 @@ p {
   transform: translate(-50%, -50%);
 }
 
-.square {
+#gameBoard tr, td{
+  padding: 50px;
+  background-color: green;
+}
+
+td p{
+  position: absolute;
+  font-size: 2em;
+}
+
+#cellContainer {
+  width: 300px;
+  height: 300px;
+}
+
+.cell {
+  display: block;
+  position: absolute;
   width: 100px;
   height: 100px;
+  border-color: beige;
+  border-style: solid;
+  box-sizing: border-box;
+  font-family: 'chalkboardregular';
+}
+
+.cell > span{
   display: inline-block;
+  font-size: 4em;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'chalkboardregular';
+}
+
+.cell:nth-child(1) {
+  top: 50px;
+  left: 0px;
+  border-width: 0 1px 1px 0;
+}
+.cell:nth-child(2) {
+  top: 50px;
+  left: 100px;
+  border-width: 0 1px 1px 1px;
+}
+.cell:nth-child(3) {
+  top: 50px;
+  left: 200px;
+  border-width: 0 0 1px 1px;
+}
+.cell:nth-child(4) {
+  top: 150px;
+  left: 0px;
+  border-width: 1px 1px 1px 0;
+}
+.cell:nth-child(5) {
+  top: 150px;
+  left: 100px;
+  border-width: 1px;
+}
+.cell:nth-child(6) {
+  top: 150px;
+  left: 200px;
+  border-width: 1px 0 1px 1px;
+}
+.cell:nth-child(7) {
+  top: 250px;
+  left: 0px;
+  border-width: 1px 1px 0 0;
+}
+.cell:nth-child(8) {
+  top: 250px;
+  left: 100px;
+  border-width: 1px 1px 0 1px;
+}
+.cell:nth-child(9) {
+  top: 250px;
+  left: 200px;
+  border-width: 1px 0 0 1px;
 }
 
 /* mobile devices */
