@@ -286,10 +286,4 @@ for(let x in menuTitle.textContent){
 }
 menuTitle.innerHTML = tempTitle;
 
-
-
-
 init();
-
-
-
