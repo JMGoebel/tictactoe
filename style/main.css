@@ -6,7 +6,6 @@
 
 body {
   background-color: black;
-  background-image: url('http://jasongoebel.com/assets/images/bg-chalkboard.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -18,7 +17,6 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'chalk_dashregular';
 }
 
 #menu h3 {
@@ -26,20 +24,19 @@ body {
 }
 
 p {
-  font-family: 'chalkboardregular';
-  font-size: 1.2em;
+  font-size: 2em;
   color: antiquewhite;
   text-align: center;
 }
 
 #xs, #os {
-  font-size: 1.5em;
+  font-size: 3em;
   display: inline-block;
   transition: all .2s linear;
 }
 
 #xs:hover, #os:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   cursor: pointer;
   text-shadow: 2px 2px black;
 }
@@ -59,6 +56,8 @@ p {
 #menuTitle {
   width: 100%;
   text-align: center;
+  color: white;
+  font-size: 5em;
 }
 
 @keyframes bounce {
@@ -111,17 +110,16 @@ td p{
   border-color: beige;
   border-style: solid;
   box-sizing: border-box;
-  font-family: 'chalkboardregular';
 }
 
 .cell > span{
   display: inline-block;
-  font-size: 4em;
+  font-size: 10em;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'chalkboardregular';
+  padding-bottom: 30px;
 }
 
 .cell:nth-child(1) {
